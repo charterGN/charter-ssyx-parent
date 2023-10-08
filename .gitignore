@@ -9,3 +9,5 @@
 /service/service-sys/target/
 /service-client/service-activity-client/target/
 /service-client/service-product-client/target/
+/service/service-payment/src/main/resources/application-dev.yml
+/service/service-product/src/main/resources/application-dev.yml
