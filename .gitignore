@@ -11,3 +11,7 @@
 /service-client/service-product-client/target/
 /service/service-payment/src/main/resources/application-dev.yml
 /service/service-product/src/main/resources/application-dev.yml
+
+.idea
+**/target
+*.log

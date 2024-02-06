@@ -20,7 +20,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/admin/sys/region")
-@CrossOrigin
+//@CrossOrigin
 public class RegionController {
 
     @Autowired
@@ -35,5 +35,6 @@ public class RegionController {
         List<Region> list = regionService.getRegionByKeyword(keyword);
         return Result.ok(list);
     }
+
 }
 

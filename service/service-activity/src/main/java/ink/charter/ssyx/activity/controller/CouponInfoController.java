@@ -21,7 +21,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/admin/activity/couponInfo")
-@CrossOrigin
+//@CrossOrigin
 public class CouponInfoController {
 
     @Autowired
@@ -76,5 +76,34 @@ public class CouponInfoController {
         couponInfoService.saveCouponRule(couponRuleVo);
         return Result.ok();
     }
+
+    //6 更新优惠卷
+//    url: `${api_name}/update`,
+//    method: 'put',
+//    data: role
+    @PutMapping("/update")
+    public Result update(@RequestBody CouponInfo couponInfo){
+        couponInfoService.updateById(couponInfo);
+        return Result.ok();
+    }
+
+    //7 根据id删除优惠卷
+//    url: `${api_name}/remove/${id}`,
+//    method: 'delete'
+    @DeleteMapping("/remove/{id}")
+    public Result removeById(@PathVariable("id") Long id){
+        couponInfoService.removeById(id);
+        return Result.ok();
+    }
+
+    //TODO 8 批量删除
+//    url: `${api_name}/batchRemove`,
+//    method: 'delete',
+//    data: idList
+
+    //TODO 9 根据优惠卷keyword查询规则数据
+//    url: `${api_name}/findCouponByKeyword/${keyword}`,
+//    method: 'get'
+
 }
 

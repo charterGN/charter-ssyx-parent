@@ -29,4 +29,5 @@ public class CategoryApiController {
         List<Category> categoryList = productFeignClient.findAllCategoryList();
         return Result.ok(categoryList);
     }
+
 }

@@ -25,7 +25,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/admin/activity/activityInfo")
-@CrossOrigin
+//@CrossOrigin
 public class ActivityInfoController {
 
     @Autowired
@@ -92,6 +92,30 @@ public class ActivityInfoController {
                 activityInfoService.findSkuInfoByKeyword(keyword);
         return Result.ok(list);
     }
+
+    // 更新活动
+//    url: `${api_name}/update`,
+//    method: 'put',
+//    data: role
+    @PutMapping("/update")
+    public Result update(@RequestBody ActivityInfo activityInfo){
+        activityInfoService.updateById(activityInfo);
+        return Result.ok();
+    }
+
+    //根据id删除活动
+//    url: `${api_name}/remove/${id}`,
+//    method: 'delete'
+    @DeleteMapping("/remove/{id}")
+    public Result removeById(@PathVariable("id") Long id){
+        activityInfoService.removeById(id);
+        return Result.ok();
+    }
+
+    //TODO 批量删除活动
+//    url: `${api_name}/batchRemove`,
+//    method: 'delete',
+//    data: idList
 
 }
 

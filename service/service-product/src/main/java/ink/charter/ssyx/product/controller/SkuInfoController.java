@@ -24,7 +24,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/admin/product/skuInfo")
-@CrossOrigin
+//@CrossOrigin
 public class SkuInfoController {
 
     @Autowired

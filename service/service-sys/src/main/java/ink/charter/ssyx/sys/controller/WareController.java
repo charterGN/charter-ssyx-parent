@@ -24,7 +24,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/admin/sys/ware")
-@CrossOrigin
+//@CrossOrigin
 public class WareController {
 
     @Autowired
@@ -39,5 +39,6 @@ public class WareController {
         List<Ware> list = wareService.list();
         return Result.ok(list);
     }
+
 }
 

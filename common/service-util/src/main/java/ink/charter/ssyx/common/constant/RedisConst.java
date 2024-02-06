@@ -29,7 +29,7 @@ public class RedisConst {
     public static final String USER_LOGIN_KEY_PREFIX = "user:login:";
     public static final String ADMIN_LOGIN_KEY_PREFIX = "admin:login:";
     //    public static final String userinfoKey_suffix = ":info";
-    public static final int USERKEY_TIMEOUT = 365;
+    public static final int USERKEY_TIMEOUT = 24;
     public static final String ORDER_SKU_MAP = "order:sku:";
 
     //秒杀商品前缀

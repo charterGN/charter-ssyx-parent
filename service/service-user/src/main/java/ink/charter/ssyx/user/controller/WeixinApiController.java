@@ -75,7 +75,6 @@ public class WeixinApiController {
         String session_key = jsonObject.getString("session_key");
         String openid = jsonObject.getString("openid");
 
-//        openid = "odo3j4q2KskkbbW-krfE-cAxUnzU1";
         //4 添加微信用户信息到数据库里面
         //// 操作user表
         //// 判断是否是第一次使用微信授权登录：如何判断？openId
@@ -105,7 +104,7 @@ public class WeixinApiController {
                 .set(RedisConst.USER_LOGIN_KEY_PREFIX+user.getId(),
                         userLoginVo,
                         RedisConst.USERKEY_TIMEOUT,
-                        TimeUnit.DAYS);
+                        TimeUnit.HOURS);
 
         //8 需要数据封装到map返回
         Map<String,Object> map = new HashMap<>();
@@ -126,4 +125,5 @@ public class WeixinApiController {
         userService.updateById(user1);
         return Result.ok();
     }
+
 }

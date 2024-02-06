@@ -2,6 +2,7 @@ package ink.charter.ssyx.order.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import ink.charter.ssyx.model.order.OrderItem;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Repository;
  * @author charter
  * @since 2023-09-27
  */
-@Repository
+@Mapper
 public interface OrderItemMapper extends BaseMapper<OrderItem> {
 
 }

@@ -124,9 +124,8 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
         //2 拿着orderNo 到 redis进行查询，
         String script = "if(redis.call('get', KEYS[1]) == ARGV[1]) then return redis.call('del', KEYS[1]) else return 0 end";
         //3 如果redis有相同orderNo，表示正常提交订单，把redis的orderNo删除
-        Boolean flag = (Boolean)redisTemplate
-                        .execute(new DefaultRedisScript(script, Boolean.class),
-                                    Arrays.asList(RedisConst.ORDER_REPEAT + orderNo), orderNo);
+        Boolean flag = (Boolean)redisTemplate.execute(new DefaultRedisScript(script, Boolean.class),
+                                                    Arrays.asList(RedisConst.ORDER_REPEAT + orderNo), orderNo);
         //4 如果redis没有相同orderNo，表示重复提交了，不能再往后进行
         if(!flag) {
             throw new SsyxException(ResultCodeEnum.REPEAT_SUBMIT);

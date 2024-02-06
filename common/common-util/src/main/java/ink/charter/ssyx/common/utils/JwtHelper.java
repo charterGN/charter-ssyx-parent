@@ -48,11 +48,11 @@ public class JwtHelper {
         //jwttoken无需删除，客户端扔掉即可。
     }
 
-    public static void main(String[] args) {
-        String token = JwtHelper.createToken(1L, "admin");
-        System.out.println(token);
-
-        System.out.println(JwtHelper.getUserId(token));
-        System.out.println(JwtHelper.getUserName(token));
-    }
+//    public static void main(String[] args) {
+//        String token = JwtHelper.createToken(1L, "admin");
+//        System.out.println(token);
+//
+//        System.out.println(JwtHelper.getUserId(token));
+//        System.out.println(JwtHelper.getUserName(token));
+//    }
 }
