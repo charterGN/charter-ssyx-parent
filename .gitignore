@@ -12,6 +12,32 @@
 /service/service-payment/src/main/resources/application-dev.yml
 /service/service-product/src/main/resources/application-dev.yml
 
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
 .idea
-**/target
+*.iws
+*.iml
+*.ipr
 *.log
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
